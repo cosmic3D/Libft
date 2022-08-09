@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <limits.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 static int	get_digits(int n)
 {
 	int	i;
@@ -60,9 +60,9 @@ char	*ft_itoa(int n)
 	char	*new;
 
 	if (n == INT_MIN)
-		return (ft_strdup("-2147483648"));
+		return ("-2147483648");
 	if (n == 0)
-		return (ft_strdup("0"));
+		return ("0");
 	if (n < 0)
 	{
 		new = malloc(sizeof(char) * (get_digits(n) + 2));
@@ -81,8 +81,8 @@ char	*ft_itoa(int n)
 	}
 }
 
-// int main(void)
-// {
-//     printf("%s\n", ft_itoa(-22));
-//     return 0;
-// }
+//int main(void)
+//{
+//    printf("%s\n", ft_itoa());
+//    return 0;
+//}
